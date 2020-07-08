@@ -7,3 +7,6 @@
 
 ### Run it
 Simply run 'python3 demo.py'
+
+### Paper
+https://arxiv.org/abs/1808.00897
