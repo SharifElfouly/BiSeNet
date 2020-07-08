@@ -6,7 +6,7 @@
 - 15 FPS on K80
 
 ### Run it
-Simply run 'python3 demo.py'
+Simply run `python3 demo.py`
 
 ### Paper
 https://arxiv.org/abs/1808.00897
