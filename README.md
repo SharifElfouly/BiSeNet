@@ -1,5 +1,5 @@
 # BiSeNet
-My implementation of [BiSeNet](https://arxiv.org/abs/1808.00897). My environment is pytorch1.0 and python3, the code is not tested with other environments, but it should also work on similar environments.
+**Forked from https://github.com/CoinCheung/BiSeNet**
 
 ### Results on image with size (850, 600)
 - 50 FPS on GTX 1070
