@@ -1,3 +1,4 @@
+from vis import *
 import time
 import argparse
 import torch
@@ -43,4 +44,6 @@ for _ in range(100):
     out = net(im)[0].argmax(dim=1).squeeze().detach().cpu().numpy()
     e = time.time()
     print(1 / (e-s))
+        
+mask = get_color_pallete(out, 'citys')
 cv2.imwrite('./res.jpg', out)
