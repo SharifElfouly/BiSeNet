@@ -21,7 +21,7 @@ parse.add_argument(
         '--img_path',
         dest='img_path',
         type=str,
-        default='./pic.jpg',)
+        default='/home/sharif/Downloads/person.jpeg',)
 args = parse.parse_args()
 
 
@@ -39,11 +39,8 @@ to_tensor = transforms.Compose([
 im = to_tensor(Image.open(args.img_path).convert('RGB').resize((850,600))).unsqueeze(0).cuda()
 
 # inference
-for _ in range(100):
-    s = time.time()
-    out = net(im)[0].argmax(dim=1).squeeze().detach().cpu().numpy()
-    e = time.time()
-    print(1 / (e-s))
+out = net(im)[0].argmax(dim=1).squeeze().detach().cpu().numpy()
         
 mask = get_color_pallete(out, 'citys')
-cv2.imwrite('./res.jpg', out)
+print(mask)
+mask.save('res.png')
